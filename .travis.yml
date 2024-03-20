@@ -7,3 +7,11 @@ before_install:
 
 script:
   - docker run -e CI=true langholz/docker-react-test npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-north-1"
+  app: "frontend"
+  env: "Frontend-env"
+  bucket_name: "elasticbeanstalk-eu-north-1-730335572061"
+  bucket_path: "frontend"
