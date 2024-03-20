@@ -7,7 +7,7 @@ before_install:
 
 script:
   - docker run -e CI=true langholz/docker-react-test npm run test
-
+  
 deploy:
   provider: elasticbeanstalk
   region: "eu-north-1"
