@@ -7,7 +7,7 @@ before_install:
 
 script:
   - docker run -e CI=true langholz/docker-react-test npm run test
-  
+
 deploy:
   provider: elasticbeanstalk
   region: "eu-north-1"
@@ -16,6 +16,6 @@ deploy:
   bucket_name: "elasticbeanstalk-eu-north-1-730335572061"
   bucket_path: "frontend"
   on:
-    branch: master
+    branch: main
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: "$AWS_SECRET_KEY"
